@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#155b9d"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="apple-mobile-web-app-title" content="KE Checklist"><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icons/icon-180.png"><title>Kids Empire Construction Checklist</title>
+<style>
+:root{--blue:#1f78c8;--dark:#155b9d;--purple:#65459b;--green:#70b943;--orange:#f28b2b;--yellow:#ffd84a;--ink:#17212b;--muted:#66717d;--line:#c9d2dc;--soft:#f5f8fb;--danger:#a93a3a}*{box-sizing:border-box}html{background:#e9eef3}body{margin:0;color:var(--ink);font:16px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;padding-bottom:calc(92px + env(safe-area-inset-bottom));background:#e9eef3}.app{max-width:1100px;margin:auto;background:white;min-height:100vh}.brand{height:7px;background:linear-gradient(90deg,var(--blue) 0 24%,var(--purple) 24% 45%,var(--green) 45% 64%,var(--orange) 64% 82%,var(--yellow) 82%)}header{padding:18px 16px 12px;border-bottom:1px solid #ddd}h1{font-size:24px;margin:0;color:var(--dark)}.sub{font-weight:700;color:#44505b}.meta{display:grid;gap:10px;padding:12px 16px;background:var(--soft)}.field label{display:block;font-weight:800;font-size:13px;margin-bottom:4px}.field input{width:100%;font:inherit;padding:11px;border:1px solid #aab5bf;border-radius:8px;background:#fff}.toolbar{position:sticky;top:0;z-index:20;background:#fff;padding:10px 12px;border-bottom:1px solid #bbb;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch}.btn{min-height:44px;border:1px solid #8d9aa7;background:#fff;border-radius:8px;padding:9px 12px;font-weight:800;white-space:nowrap;color:var(--ink)}.btn.active,.btn.primary{background:var(--blue);border-color:var(--dark);color:white}.summary{padding:10px 16px;font-size:13px;font-weight:800;color:#4e5965}.section{margin:0 12px 16px;border:1px solid #8fa0b1;border-radius:10px;overflow:hidden}.section-head{background:linear-gradient(90deg,var(--dark),var(--blue));color:#fff;padding:12px 13px;font-weight:900;display:flex;justify-content:space-between;gap:10px}.subsection{padding:9px 13px;background:#e9f2fb;color:var(--dark);font-weight:900;border-top:1px solid #b7c5d2}.row{padding:13px;border-top:1px solid #ccd5dd}.q{font-weight:800;margin-bottom:11px;display:grid;grid-template-columns:38px 1fr}.qid{color:var(--dark)}.controls{display:grid;grid-template-columns:1fr 1fr;gap:9px}.choice{min-height:48px;border:1px solid #9aa7b3;border-radius:9px;display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;background:#fff}.choice input{width:22px;height:22px;accent-color:var(--blue)}.pct{grid-column:1/-1;display:flex;align-items:center;gap:10px;font-weight:800}.pct input{width:90px;min-height:46px;font:800 18px inherit;text-align:center;border:1px solid #8fa0b1;border-radius:8px}.notes{margin-top:10px}.notes label{font-size:13px;font-weight:800;color:#4e5965}.notes textarea{width:100%;min-height:72px;margin-top:4px;padding:10px;font:inherit;border:1px solid #aab5bf;border-radius:8px;resize:vertical}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.mini{min-height:40px;border:1px solid #9aa7b3;background:#fff;border-radius:7px;padding:7px 10px;font-weight:700}.footer{padding:4px 12px 30px;display:grid;gap:10px}.savebar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#fff;border-top:1px solid #aeb8c2;padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:10px}.savebar .btn{flex:1}.statusmsg{font-size:13px;text-align:center;color:var(--muted);padding:0 12px 10px}.hidden{display:none!important}.error{background:#fff1f1;color:#7c2525;border:1px solid #e0aaaa;padding:10px 12px;margin:10px 12px;border-radius:8px;font-weight:700}.install{background:#eef6fd;padding:10px 12px;margin:10px 12px;border-radius:8px;font-size:14px}.resolved{background:white;color:var(--dark);border-radius:999px;padding:2px 7px;font-size:11px}
+@media(min-width:700px){body{font-size:15px}.meta{grid-template-columns:1fr 1fr 180px}.controls{grid-template-columns:130px 150px 1fr}.pct{grid-column:auto}.section{margin-left:22px;margin-right:22px}.q{grid-template-columns:45px 1fr}.row{display:grid;grid-template-columns:1fr 360px;column-gap:18px}.notes,.actions{grid-column:1/-1}.toolbar{padding-left:22px;padding-right:22px}.summary{padding-left:22px}.footer{padding-left:22px;padding-right:22px}}
+@media(min-width:1000px){.savebar{position:static;margin:0 auto;max-width:1100px}.savebar .btn{flex:0 0 auto}.app{box-shadow:0 0 22px #0002}}
+@media print{body{padding:0;background:white}.toolbar,.savebar,.actions,.footer,.install{display:none!important}.app{max-width:none}.section{break-inside:avoid}.row{display:grid;grid-template-columns:1fr 330px}.notes{grid-column:1/-1}}
+</style></head><body><div class="app"><div class="brand"></div><header><h1>KIDS EMPIRE</h1><div class="sub">Construction Completion Checklist</div></header><div class="meta"><div class="field"><label>Project / Location</label><input id="projectName"></div><div class="field"><label>Reviewed By</label><input id="reviewedBy"></div><div class="field"><label>Date</label><input id="reviewDate" type="date"></div></div><div id="installHint" class="install">On iPhone/iPad: open this site in Safari, tap Share, then <b>Add to Home Screen</b>. After the first successful load, the app works offline.</div><div class="toolbar"><button class="btn filter" data-filter="complete">Complete</button><button class="btn filter" data-filter="notstarted">Not Started</button><button class="btn filter" data-filter="progress">In Progress</button><button class="btn filter" data-filter="notes">Has Notes</button><button class="btn" id="clearFilters">Clear Filters</button></div><div id="error" class="error hidden"></div><div class="summary" id="summary"></div><main id="content"></main><div class="footer"><button class="btn" id="addSection">+ Add Section with Row</button><button class="btn" id="newInspection">New Blank Inspection</button><button class="btn" id="exportJson">Export Backup</button><input type="file" id="importJson" accept="application/json,.json" class="hidden"><button class="btn" id="importBtn">Import Backup</button></div><div class="statusmsg" id="statusmsg"></div></div><div class="savebar"><button class="btn primary" id="saveBottom">Save Inspection</button></div>
+<script>
+const BASE=[ {num:'A',title:'EXTERIOR & ENTRY',entries:[
+  {type:'item',id:'A1',text:'Is the handicapped parking space in front of the park striped with an ADA sign mounted in front of it?'},
+  {type:'item',id:'A2',text:'Is the main sign installed?'},
+  {type:'item',id:'A3',text:'Is the storefront entry and hardware installed?'},
+  {type:'item',id:'A4',text:'Is the Knox Box (fire department lock box) installed near the entry?'}]},
+ {num:'B',title:'FRAMING, DRYWALL & ELECTRICAL / LOW VOLTAGE / PLUMBING ROUGH-IN',entries:[
+  {type:'subsection',title:'Framing Completion'},
+  {type:'item',id:'B1',text:'Bathrooms - framing completion'},
+  {type:'item',id:'B2',text:'Back of House - framing completion'},
+  {type:'item',id:'B3',text:'Disco Room - framing completion'},
+  {type:'subsection',title:'Electrical, Low Voltage & Plumbing Rough-In'},
+  {type:'item',id:'B4',text:'Electrical rough-in'},
+  {type:'item',id:'B5',text:'Plumbing rough-in'},
+  {type:'item',id:'B6',text:'Low voltage rough-in'},
+  {type:'subsection',title:'Drywall & Ceiling'},
+  {type:'item',id:'B7',text:'Is the drywall installed at all framing locations?'},
+  {type:'item',id:'B8',text:'Is the drywall finished at all framing locations?'},
+  {type:'item',id:'B9',text:'Is the drywall painted (primed) at all framing locations?'},
+  {type:'item',id:'B10',text:'Is the exposed ceiling painted white at all locations?'},
+  {type:'item',id:'B11',text:'Is the FRP paneling installed in the back-office area?'}]},
+ {num:'C',title:'PLUMBING',entries:[
+  {type:'item',id:'C1',text:'Are the handwashing sinks, mop sink and hot water heater installed?'},
+  {type:'item',id:'C2',text:'Are the sinks and drain assemblies installed with scald protection at the drains?'},
+  {type:'item',id:'C3',text:'Are the drinking fountains and railing installed?'},
+  {type:'item',id:'C4',text:'Are all toilets and urinals installed?'}]},
+ {num:'D',title:'ELECTRICAL, LIGHTING, HVAC & LIFE SAFETY',entries:[
+  {type:'item',id:'D1',text:'Are the electrical outlets, switches and trim installed?'},
+  {type:'item',id:'D2',text:'Are the overhead lights installed?'},
+  {type:'item',id:'D3',text:'Are the HVAC drops and ductwork installed?'},
+  {type:'item',id:'D4',text:'Are fire / smoke / strobes / pull stations installed?'},
+  {type:'item',id:'D5',text:'Do the sprinkler drops appear to be installed with heads?'},
+  {type:'item',id:'D6',text:'Are the electrical panels, sign subpanel, transformer, and fire alarm panels / devices installed in the utility room?'},
+  {type:'item',id:'D7',text:'Are the thermostats installed?'},
+  {type:'item',id:'D8',text:'If you have access to the roof, do all HVAC units appear to be in place and connected with power / gas?'}]},
+ {num:'E',title:'INTERIOR FINISHES, DOORS & CASEWORK',entries:[
+  {type:'item',id:'E1',text:'Is the casework at the lobby installed?'},
+  {type:'item',id:'E2',text:'Are the half doors installed?'},
+  {type:'item',id:'E3',text:'Is the flooring installed?'},
+  {type:'item',id:'E4',text:'Is the base installed?'},
+  {type:'item',id:'E5',text:'Are all doors and hardware installed?'},
+  {type:'item',id:'E6',text:'Are refrigerated units installed at casework?'}]},
+ {num:'F',title:'RESTROOMS & BACK OF HOUSE',entries:[
+  {type:'item',id:'F1',text:'Is the floor and wall tile installed in the bathrooms?'},
+  {type:'item',id:'F2',text:'Are the vanities installed?'},
+  {type:'item',id:'F3',text:'Are the toilet partitions installed?'},
+  {type:'item',id:'F4',text:'Are all toilet accessories installed?'},
+]},
+ {num:'G',title:'FINAL FINISHES, FIXTURES & TECHNOLOGY',entries:[
+  {type:'item',id:'G1',text:'Are the final paint colors applied?'},
+  {type:'item',id:'G2',text:'Are the graphics / murals installed?'},
+  {type:'item',id:'G3',text:'Is ADA signage installed at bathroom entries?'},
+  {type:'item',id:'G4',text:'Are the customer lockers installed?'},
+  {type:'item',id:'G5',text:'Are the speakers installed?'},
+  {type:'item',id:'G6',text:'Is the Wi-Fi router installed?'},
+  {type:'item',id:'G7',text:'Are the POS systems installed?'}]},
+ {num:'H',title:'KIDS EMPIRE PLAY AREAS & FURNISHINGS',entries:[
+  {type:'item',id:'H1',text:'Are the KE play areas installed?'},
+  {type:'item',id:'H2',text:'Is the scrim installed?'},
+  {type:'item',id:'H3',text:'Are the tables and chairs assembled and arranged in the space?'},
+  {type:'item',id:'H4',text:'Are the vending machines installed?'}]},
+ {num:'I',title:'SITE CONDITION, CLEANUP & TEMPORARY FACILITIES',entries:[
+  {type:'item',id:'I1',responseType:'yesno',text:'Are there any stockpiled materials located in the space?'},
+  {type:'item',id:'I2',responseType:'yesno',text:'Is there any significant construction dust, debris, or packaging in the space?'},
+  {type:'item',id:'I3',responseType:'yesno',text:'Are there any storage containers, dumpsters, trailers, porta-potties, or temporary fencing on site?'},
+  {type:'item',id:'I4',responseType:'yesno',text:'Are there any permit cards, inspection receipts or subcontractor names apparent?'}]}
+];
+const STORAGE_KEY='kids-empire-pwa-current-v2';let filters={complete:false,notstarted:false,progress:false,notes:false};let dirty=false;
+function blankItem(e,custom){return Object.assign({},e,{status:e.responseType==='yesno'?{Yes:false,No:false}:{Complete:false,'Not Started':false},percent:e.responseType==='yesno'?undefined:'',notes:'',custom:!!custom})}
+function fresh(){return {meta:{projectName:'',reviewedBy:'',reviewDate:new Date().toISOString().slice(0,10)},sections:JSON.parse(JSON.stringify(BASE)).map(function(s){s.entries=s.entries.map(function(e){return e.type==='item'?blankItem(e,false):e});return s})}}
+function normalizeLoaded(x){
+ if(!x||!Array.isArray(x.sections))return fresh();
+ var clean=fresh();
+ clean.meta=Object.assign(clean.meta,x.meta||{});
+ clean.sections=clean.sections.map(function(sec){
+  var oldSec=x.sections.find(function(s){return s&&s.num===sec.num});
+  if(!oldSec||!Array.isArray(oldSec.entries))return sec;
+  sec.entries=sec.entries.map(function(e){
+   if(e.type!=='item')return e;
+   var old=oldSec.entries.find(function(o){return o&&o.type==='item'&&o.id===e.id});
+   var item=blankItem(e,false);
+   if(!old)return item;
+   item.notes=typeof old.notes==='string'?old.notes:'';
+   if(item.responseType==='yesno'){
+    item.status.Yes=!!(old.status&&old.status.Yes);item.status.No=!!(old.status&&old.status.No);
+   }else{
+    item.status.Complete=!!(old.status&&old.status.Complete);item.status['Not Started']=!!(old.status&&old.status['Not Started']);
+    item.percent=(old.percent===undefined||old.percent===null)?'':String(old.percent);
+   }
+   return item;
+  });
+  oldSec.entries.forEach(function(o){if(o&&o.custom&&o.type==='item'&&!sec.entries.some(function(e){return e.type==='item'&&e.id===o.id})){var c=blankItem({type:'item',id:o.id,text:o.text||'Added item',responseType:sec.num==='I'?'yesno':undefined},true);c.notes=o.notes||'';if(c.responseType==='yesno'){c.status.Yes=!!(o.status&&o.status.Yes);c.status.No=!!(o.status&&o.status.No)}else{c.status.Complete=!!(o.status&&o.status.Complete);c.status['Not Started']=!!(o.status&&o.status['Not Started']);c.percent=o.percent==null?'':String(o.percent)}sec.entries.push(c)}});
+  return sec;
+ });
+ return clean;
+}
+function loadState(){try{var x=JSON.parse(localStorage.getItem(STORAGE_KEY));return normalizeLoaded(x)}catch(e){return fresh()}}
+let state=loadState();
+function persist(markDirty){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}catch(e){}if(markDirty){dirty=true;setMsg('Changes stored on this device — tap Save Inspection to mark complete.')}}
+function saveInspection(){persist(false);dirty=false;setMsg('Inspection saved on this device at '+new Date().toLocaleTimeString([], {hour:'numeric',minute:'2-digit'}));}
+function setMsg(s){document.getElementById('statusmsg').textContent=s}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function items(sec){return sec.entries.filter(function(e){return e.type==='item'})}function pct(i){return i.responseType==='yesno'||i.percent===''||i.percent==null?null:Number(i.percent)}function isComplete(i){return i.responseType!=='yesno'&&(i.status.Complete||pct(i)===100)}function isNotStarted(i){return i.responseType!=='yesno'&&(i.status['Not Started']||pct(i)===0)}function isProgress(i){var p=pct(i);return i.responseType!=='yesno'&&p!==null&&p>0&&p<100}function answered(i){return i.responseType==='yesno'?(i.status.Yes||i.status.No):(isComplete(i)||isNotStarted(i)||isProgress(i))}function unanswered(){var a=[];state.sections.forEach(function(s){items(s).forEach(function(i){if(!answered(i))a.push(i.id)})});return a}
+function matches(i){var active=Object.keys(filters).filter(function(k){return filters[k]});if(!active.length)return true;return active.every(function(f){return f==='complete'?isComplete(i):f==='notstarted'?isNotStarted(i):f==='progress'?isProgress(i):!!String(i.notes||'').trim()})}
+function normalizePercent(v){var x=String(v).trim();if(x==='')return '';if(!/^\d{1,3}$/.test(x))return null;var n=Number(x);if(!Number.isInteger(n)||n<0||n>100)return null;return String(n)}
+function nextId(sec){var n=1;while(items(sec).some(function(x){return x.id===sec.num+'x'+n}))n++;return sec.num+'x'+n}
+function newItem(sec,text){var yesno=sec.num==='I';return blankItem({type:'item',id:nextId(sec),text:text,responseType:yesno?'yesno':undefined},true)}
+function showError(msg){var e=document.getElementById('error');e.textContent=msg;e.classList.remove('hidden');e.scrollIntoView({behavior:'smooth',block:'center'})}function clearError(){document.getElementById('error').classList.add('hidden')}
+function render(){document.getElementById('projectName').value=state.meta.projectName||'';document.getElementById('reviewedBy').value=state.meta.reviewedBy||'';document.getElementById('reviewDate').value=state.meta.reviewDate||'';var root=document.getElementById('content');root.innerHTML='';var total=0,ans=0,complete=0,progress=0,notstarted=0,yes=0,no=0;state.sections.forEach(function(sec,si){var list=items(sec);total+=list.length;ans+=list.filter(answered).length;complete+=list.filter(isComplete).length;progress+=list.filter(isProgress).length;notstarted+=list.filter(isNotStarted).length;yes+=list.filter(function(i){return i.responseType==='yesno'&&i.status.Yes}).length;no+=list.filter(function(i){return i.responseType==='yesno'&&i.status.No}).length;if(Object.keys(filters).some(function(k){return filters[k]})&&!list.some(matches))return;var el=document.createElement('section');el.className='section';el.innerHTML='<div class="section-head"><span>'+esc(sec.num)+'. '+esc(sec.title)+'</span>'+(list.length&&list.every(answered)?'<span class="resolved">Answered</span>':'')+'</div>';var current=null;sec.entries.forEach(function(e,ei){if(e.type==='subsection'){current=document.createElement('div');current.className='subsection';current.textContent=e.title;el.appendChild(current);return}if(!matches(e))return;var row=document.createElement('div');row.className='row';var controls;if(e.responseType==='yesno'){controls='<div class="controls"><label class="choice"><input type="checkbox" data-kind="status" data-key="Yes" data-si="'+si+'" data-ei="'+ei+'" '+(e.status.Yes?'checked':'')+'>Yes</label><label class="choice"><input type="checkbox" data-kind="status" data-key="No" data-si="'+si+'" data-ei="'+ei+'" '+(e.status.No?'checked':'')+'>No</label></div>'}else{controls='<div class="controls"><label class="choice"><input type="checkbox" data-kind="status" data-key="Complete" data-si="'+si+'" data-ei="'+ei+'" '+(e.status.Complete?'checked':'')+'>Complete</label><label class="choice"><input type="checkbox" data-kind="status" data-key="Not Started" data-si="'+si+'" data-ei="'+ei+'" '+(e.status['Not Started']?'checked':'')+'>Not Started</label><label class="pct">% Complete <input type="number" inputmode="numeric" min="0" max="100" step="1" data-kind="percent" data-si="'+si+'" data-ei="'+ei+'" value="'+esc(e.percent)+'"></label></div>'}row.innerHTML='<div class="q"><span class="qid">'+esc(e.id)+'.</span><span>'+esc(e.text)+'</span></div><div>'+controls+'</div><div class="notes"><label>Notes</label><textarea data-kind="notes" data-si="'+si+'" data-ei="'+ei+'">'+esc(e.notes)+'</textarea></div>'+(e.custom?'<div class="actions"><button class="mini" data-action="rename" data-si="'+si+'" data-ei="'+ei+'">Rename</button><button class="mini" data-action="delete" data-si="'+si+'" data-ei="'+ei+'">Delete</button></div>':'');el.appendChild(row)});var add=document.createElement('div');add.className='row actions';add.innerHTML='<button class="mini" data-action="addrow" data-si="'+si+'">+ Add Row</button><button class="mini" data-action="addsub" data-si="'+si+'">+ Add Subsection with Row</button>';el.appendChild(add);root.appendChild(el)});document.getElementById('summary').textContent=complete+' complete • '+progress+' in progress • '+notstarted+' not started • '+yes+' yes • '+no+' no • '+(total-ans)+' unanswered • '+total+' items'}
+document.addEventListener('change',function(e){var t=e.target;if(t.dataset.kind==='status'){var i=state.sections[+t.dataset.si].entries[+t.dataset.ei],k=t.dataset.key;i.status[k]=t.checked;if(i.responseType==='yesno'){if(t.checked&&k==='Yes')i.status.No=false;if(t.checked&&k==='No')i.status.Yes=false}else{if(t.checked&&k==='Complete'){i.status['Not Started']=false;i.percent='100'}if(t.checked&&k==='Not Started'){i.status.Complete=false;i.percent='0'}}persist(true);render()}else if(t.dataset.kind==='percent'){var i=state.sections[+t.dataset.si].entries[+t.dataset.ei],v=normalizePercent(t.value);if(v===null){showError('Enter a whole number from 0 to 100.');render();return}i.percent=v;var p=pct(i);i.status.Complete=p===100;i.status['Not Started']=p===0;persist(true);render()}else if(t.id==='reviewDate'){state.meta.reviewDate=t.value;persist(true)}})
+document.addEventListener('input',function(e){var t=e.target;if(t.id==='projectName'){state.meta.projectName=t.value;persist(true)}else if(t.id==='reviewedBy'){state.meta.reviewedBy=t.value;persist(true)}else if(t.dataset.kind==='notes'){state.sections[+t.dataset.si].entries[+t.dataset.ei].notes=t.value;persist(true)}})
+document.addEventListener('click',function(e){var b=e.target.closest('[data-action]');if(!b)return;var sec=state.sections[+b.dataset.si],a=b.dataset.action;if(a==='addrow'){var text=prompt('New checklist item:');if(text){sec.entries.push(newItem(sec,text));persist(true);render()}}if(a==='addsub'){var name=prompt('New subsection name:');if(!name)return;var text=prompt('First checklist item:');if(text){sec.entries.push({type:'subsection',title:name,custom:true});sec.entries.push(newItem(sec,text));persist(true);render()}}if(a==='rename'){var i=sec.entries[+b.dataset.ei],v=prompt('Rename checklist item:',i.text);if(v){i.text=v;persist(true);render()}}if(a==='delete'&&confirm('Delete this added row?')){sec.entries.splice(+b.dataset.ei,1);persist(true);render()}})
+document.querySelectorAll('.filter').forEach(function(b){b.addEventListener('click',function(){clearError();var turning=!filters[b.dataset.filter];if(turning){var miss=unanswered();if(miss.length){showError('Status required before filtering. '+miss.length+' unanswered: '+miss.join(', ')+'. You may still save a partially completed inspection.');return}}filters[b.dataset.filter]=turning;b.classList.toggle('active',turning);render()})});document.getElementById('clearFilters').onclick=function(){filters={complete:false,notstarted:false,progress:false,notes:false};document.querySelectorAll('.filter').forEach(function(b){b.classList.remove('active')});clearError();render()};document.getElementById('saveBottom').onclick=saveInspection;document.getElementById('addSection').onclick=function(){var title=prompt('New section name:');if(!title)return;var text=prompt('First checklist item:');if(!text)return;var last=state.sections[state.sections.length-1].num||'@',n=String.fromCharCode(last.charCodeAt(0)+1),sec={num:n,title:title,entries:[]};sec.entries.push(newItem(sec,text));state.sections.push(sec);persist(true);render()};document.getElementById('newInspection').onclick=function(){if(confirm('Start a new blank inspection? Current saved device data will be replaced.')){state=fresh();persist(false);dirty=false;render();setMsg('New blank inspection')}};
+document.getElementById('exportJson').onclick=function(){var blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Kids Empire Inspection Backup - '+(state.meta.projectName||'Project')+' - '+(state.meta.reviewDate||'date')+'.json';a.click();setTimeout(function(){URL.revokeObjectURL(a.href)},1000)};document.getElementById('importBtn').onclick=function(){document.getElementById('importJson').click()};document.getElementById('importJson').onchange=function(e){var f=e.target.files[0];if(!f)return;var r=new FileReader();r.onload=function(){try{var x=JSON.parse(r.result);if(!x.sections)throw 0;state=x;persist(true);render();setMsg('Backup imported')}catch(err){showError('That file is not a valid checklist backup.')}};r.readAsText(f)};
+window.addEventListener('beforeunload',function(e){if(!dirty)return;e.preventDefault();e.returnValue=''});if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('./service-worker.js').catch(function(){})})}if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone){document.getElementById('installHint').classList.add('hidden')}try{render();setMsg('Ready — data is stored locally on this device.')}catch(err){showError('The checklist could not initialize. Reload the app. If this persists, use New Blank Inspection after the page reloads.');setMsg('Initialization error');console.error(err)};
+</script></body></html>
